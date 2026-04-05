@@ -1,0 +1,51 @@
+# ============================================================
+# GitHub Actions 工作流：社交媒体数据分析
+# ============================================================
+# 该工作流会在 raw_data 文件夹中的文件被推送时自动运行，
+# 执行数据处理脚本以更新数据库。
+# ============================================================
+
+name: Social Media Analysis Pipeline
+
+# ----------------------------------------------------------
+# 触发条件：当 raw_data/ 目录下任何文件被推送时触发
+# ----------------------------------------------------------
+on:
+  push:
+    paths:
+      - 'raw_data/**'
+
+# ----------------------------------------------------------
+# 任务定义
+# ----------------------------------------------------------
+jobs:
+  # 分析数据任务
+  analyze-data:
+    # 使用最新的 Ubuntu 系统作为运行环境
+    runs-on: ubuntu-latest
+    
+    # 任务内的步骤
+    steps:
+      # 步骤1: 检出代码
+      # 使用 actions/checkout 检出仓库的完整代码
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # 步骤2: 设置 Python 环境
+      # 使用 actions/setup-python 安装 Python 3.12
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
+
+      # 步骤3: 安装依赖
+      # 安装数据处理和 Web 框架所需的 Python 包
+      - name: Install dependencies
+        run: |
+          pip install pandas flask
+
+      # 步骤4: 运行数据处理脚本
+      # 执行 process_posts.py 分析原始数据并更新数据库
+      - name: Run data processing script
+        run: |
+          python process_posts.py

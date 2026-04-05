@@ -1,0 +1,4 @@
+user_id,username,follower_count
+u001,techfan2026,1520
+u002,skeptical_user,890
+u003,happy_customer,3200

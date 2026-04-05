@@ -1,0 +1,6 @@
+post_id,user_id,content,timestamp
+p001,u001,I love this product!,2026-04-01 10:30:00
+p002,u002,This is terrible.,2026-04-02 14:15:00
+p003,u001,"It's okay, I guess.",2026-04-03 09:45:00
+p004,u003,Great experience overall!,2026-04-04 16:20:00
+p005,u002,Not what I expected.,2026-04-05 11:00:00

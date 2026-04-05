@@ -1,0 +1,7 @@
+Requirement already satisfied: flask in C:\Users\86133\anaconda3\Lib\site-packages (2.2.2)
+Requirement already satisfied: Werkzeug>=2.2.2 in C:\Users\86133\AppData\Roaming\Python\Python311\site-packages (from flask) (3.1.7)
+Requirement already satisfied: Jinja2>=3.0 in C:\Users\86133\anaconda3\Lib\site-packages (from flask) (3.1.6)
+Requirement already satisfied: itsdangerous>=2.0 in C:\Users\86133\anaconda3\Lib\site-packages (from flask) (2.0.1)
+Requirement already satisfied: click>=8.0 in C:\Users\86133\anaconda3\Lib\site-packages (from flask) (8.0.4)
+Requirement already satisfied: colorama in C:\Users\86133\anaconda3\Lib\site-packages (from click>=8.0->flask) (0.4.6)
+Requirement already satisfied: MarkupSafe>=2.0 in C:\Users\86133\AppData\Roaming\Python\Python311\site-packages (from Jinja2>=3.0->flask) (3.0.3)
