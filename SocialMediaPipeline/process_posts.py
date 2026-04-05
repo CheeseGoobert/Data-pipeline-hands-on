@@ -55,7 +55,7 @@ def add_sentiment(posts_df):
 # ============================================================
 def merge_data(posts_df, users_df):
     """根据 user_id 合并帖子和用户数据"""
-    merged_df = posts_df.merge(users_df, on='user_name', how='left')
+    merged_df = posts_df.merge(users_df, on='user_id', how='left')
     print(f"Merged data: {len(merged_df)} rows")
     return merged_df
 
