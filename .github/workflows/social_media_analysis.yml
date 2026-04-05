@@ -49,4 +49,5 @@ jobs:
       # 执行 process_posts.py 分析原始数据并更新数据库
       - name: Run data processing script
         run: |
+          cd SocialMediaPipeline
           python process_posts.py
